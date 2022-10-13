@@ -7,18 +7,15 @@ The purpose of the analysis is to figure out the number of employees who are goi
 
 Based on the recent analysis and the queries ran on the tables, it is evident that a huge number of Senior Engineer and Senior Staff are going to retire from the organization. This constitues over 70% of the workforce. 
 
-
+![ScreenShot](https://github.com/LIPSASHARMA/Pewlett-Hackard-Analysis/blob/main/Resources/employees_retiring.png)
 
 If we look at the data that we fetched from the mentorship query, it is evident that the number of people eligible for mentorship are nowhere close to the number of people retiring from the organization. We see that the ratio is approximately 0.0214 or 2.14%, which is really less. This indicates there will be a huge number of positions that need to be filled. 
 
+![ScreenShot](https://github.com/LIPSASHARMA/Pewlett-Hackard-Analysis/blob/main/Resources/employees_eligible_mentorship.png)
 
-There is a huge amount of Engineers
+There is a huge amount of Engineers in the retirees list that make up to approxiately half of the workforce that are going to retire. 
 
-
-
-
-
-
+A similar trend is seen with regards to the employees eligible for mentorship where we observe that approximately 43% of employees are engineers who are eligible for mentorship.
 
 ## Summary: 
 
@@ -40,7 +37,7 @@ To find this we will first get the count of people eligible for mentorship per d
 
 SELECT rt.title,
   	rt.count as retire_count,
-  	mtc.count as mentoree_count
+  	mtc.count as menti_count
 INTO compare_table
 FROM retiring_titles as rt
 LEFT JOIN mentor_count as mtc
